@@ -1,0 +1,20 @@
+{
+  "name": "crud-portfolio-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm run dev --prefix frontend",
+    "server": "nodemon server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "react-router-bootstrap": "^0.26.2"
+  }
+}
