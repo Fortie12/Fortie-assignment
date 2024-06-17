@@ -23,7 +23,7 @@ const ViewScreen = () => {
   const fetchContacts = async () => {
     try {
       const response = await axios.get(
-        "https://mern-project-backend-xtdt.onrender.com/api/contacts"
+        "https://fortie-assignment-frontend.onrender.com/api/contacts"
       );
       setContacts(response.data);
     } catch (error) {
@@ -50,7 +50,7 @@ const ViewScreen = () => {
     try {
       if (editIndex === -1) {
         const response = await axios.post(
-          "https://mern-project-backend-xtdt.onrender.com/api/contacts",
+          "https://fortie-assignment-frontend.onrender.com/api/contacts",
           formDataToSend,
           {
             headers: {
@@ -61,7 +61,7 @@ const ViewScreen = () => {
         setContacts([...contacts, response.data]);
       } else {
         const response = await axios.put(
-          `https://mern-project-backend-xtdt.onrender.com/api/contacts/${contacts[editIndex]._id}`,
+          `https://fortie-assignment-frontend.onrender.com/api/contacts/${contacts[editIndex]._id}`,
           formDataToSend,
           {
             headers: {
@@ -85,7 +85,7 @@ const ViewScreen = () => {
   const handleDelete = async (contactId) => {
     try {
       await axios.delete(
-        `https://mern-project-backend-xtdt.onrender.com/api/contacts/${contactId}`
+        `https://fortie-assignment-frontend.onrender.com/api/contacts/${contactId}`
       );
       const updatedContacts = contacts.filter(
         (contact) => contact._id !== contactId
